@@ -1,0 +1,40 @@
+(setq CurrDwgName (getvar "dwgname"))
+(setq Fname (substr CurrDwgName 1 (- (strlen CurrDwgName) 4)))
+(setq name (strcat (getvar "DWGPREFIX") Fname ".pdf"))
+;Command:
+-PLOT
+;Detailed plot configuration? [Yes/No] <No>: 
+Yes
+;Enter a layout name or [?] <Model>:
+Model
+;Enter an output device name or [?] <None>:
+DWG To PDF.pc3
+;Enter paper size or [?] <ANSI A (11.00 x 8.50 Inches)>:
+ISO expand A3 (420.00 x 297.00 MM)
+;Enter paper units [Inches/Millimeters] <Inches>:
+Millimeters
+;Enter drawing orientation [Portrait/Landscape] <Portrait>: 
+Landscape
+;Plot upside down? [Yes/No] <No>:
+No
+;Enter plot area [Display/Extents/Limits/View/Window] <Display>: 
+Extents
+;Enter plot scale (Plotted Inches=Drawing Units) or [Fit] <Fit>:
+Fit
+;Enter plot offset (x,y) or [Center] <0.00,0.00>:
+Center
+;Plot with plot styles? [Yes/No] <Yes>:
+Yes
+;Enter plot style table name [acad.ctb/DWF Virtual Pens.ctb/Fill Patterns.ctb/Grayscale.ctb/monochrome.ctb/Screening 100%.ctb/Screening 25%.ctb]
+;or [?] (enter . for none) <>:
+monochrome.ctb
+;Plot with lineweights? [Yes/No] <Yes>:
+No
+;Enter shade plot setting [As displayed/legacy Wireframe/legacy Hidden/Visualstyles/Rendered] <As displayed>:
+
+;Enter file name <C:\Work\solids-Model.pdf>:
+!name
+;Save changes to page setup? Or set shade plot quality? [Yes/No/Quality] <N>:
+No
+;Proceed with plot [Yes/No] <Y>:
+Yes
