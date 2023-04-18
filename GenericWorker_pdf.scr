@@ -2,6 +2,7 @@
 (setq Fname (substr CurrDwgName 1 (- (strlen CurrDwgName) 4)))
 (setq name (strcat (getvar "DWGPREFIX") Fname ".pdf"))
 ;Command:
+#test
 -PLOT
 ;Detailed plot configuration? [Yes/No] <No>: 
 Yes
